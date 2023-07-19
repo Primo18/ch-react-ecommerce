@@ -6,7 +6,7 @@ import ToggleText from './components/ToggleText.jsx'
 function App() {
   return (
     <>
-      <User name="Daniel" age={30} profession="Developer" />
+      <User name="Daniel" age={30} profession="Hola" />
       <Counter />
       <ToggleText initial="Hello" alternate="World" />
     </>
