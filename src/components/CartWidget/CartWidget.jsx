@@ -1,4 +1,7 @@
 import './CartWidget.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+
 
 function CartWidget({ cart }) {
 
@@ -6,7 +9,7 @@ function CartWidget({ cart }) {
 
     return (
         <div className="cart-widget">
-            <i className="fas fa-shopping-cart shopping-cart"></i>
+            <FontAwesomeIcon className='faShoppingCart' icon={faShoppingCart} />
             <span className="cart-widget__count">{totalItems}</span>
         </div>
     );

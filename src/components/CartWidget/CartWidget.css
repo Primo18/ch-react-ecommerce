@@ -3,21 +3,21 @@
     display: flex;
     align-items: center;
     color: white;
+    cursor: pointer;
 }
 
 .cart-widget__count {
     position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 15px;
-    height: 15px;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: red;
-    font-size: 10px;
+    font-size: 20px;
     text-align: center;
 }
 
-.shopping-cart {
-    font-size: 24px;
-    cursor: pointer;
+.faShoppingCart {
+    font-size: 1.5em;
 }
