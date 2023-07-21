@@ -1,6 +1,8 @@
+import './ItemListContainer.css'
+
 const ItemListContainer = ({ greeting }) => {
     return (
-        <div>
+        <div className="item-list-container ">
             <h1>{greeting}</h1>
         </div>
     );

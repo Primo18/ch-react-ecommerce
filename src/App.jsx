@@ -13,11 +13,11 @@ function App() {
   ];
 
   return (
-    <div className="app">
+    <>
       <NavBar cart={cart} />
       <ItemListContainer greeting="Bienvenido a Feria Libre Digital" />
       <Footer />
-    </div>
+    </>
   );
 }
 
