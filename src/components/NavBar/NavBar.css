@@ -13,6 +13,11 @@
     width: 100px;
 }
 
+.nav-bar__logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 2em var(--color-white));
+}
+
 .nav-bar__logo img {
     width: 100%;
 }
