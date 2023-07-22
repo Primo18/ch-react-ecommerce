@@ -40,3 +40,8 @@
 .navbar-item:hover {
     text-decoration: underline;
 }
+
+.active-link {
+    font-weight: bold;
+    text-decoration: underline;
+}

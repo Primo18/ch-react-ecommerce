@@ -1,38 +1,33 @@
 import './NavBar.css';
-import { useState } from 'react';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link, NavLink } from 'react-router-dom';
 
 function NavBar({ cart }) {
-
-    const categories = ['Frutas', 'Verduras', 'Ofertas', 'Recetas'];
-
-    const [selectedCategory, setSelectedCategory] = useState(null);
-
-    const handleCategoryClick = (category) => {
-        setSelectedCategory(category);
-        // agregar la lógica adicional para manejar la categoría seleccionada
-    };
-
     return (
-        <div className="nav-bar">
+        <nav className="nav-bar">
             <div className="nav-bar__logo">
-                <img src="/logo.png" alt="Logo de la tienda" />
+                <Link to="/"><img src="/logo.png" alt="Logo de la tienda" /></Link>
             </div>
             <ul className="navbar-menu">
-                {categories.map((category) => (
-                    <li
-                        key={category}
-                        className={`navbar-item ${selectedCategory === category ? 'active' : ''}`}
-                        onClick={() => handleCategoryClick(category)}
-                    >
-                        {category}
-                    </li>
-                ))}
+                <li className='navbar-item'>
+                    <NavLink to="/" className={({ isActive }) =>
+                        isActive ? "active-link" : "link"}>Inicio</NavLink>
+                </li>
+                <li className='navbar-item'>
+                    <NavLink to="/categoria/Fruta" className={({ isActive }) =>
+                        isActive ? "active-link" : "link"
+                    }>Frutas</NavLink>
+                </li>
+                <li className='navbar-item'>
+                    <NavLink to="/categoria/Verdura" className={({ isActive }) =>
+                        isActive ? "active-link" : "link"
+                    }>Verduras</NavLink>
+                </li>
             </ul>
             <div className="nav-bar__cart">
                 <CartWidget cart={cart} />
             </div>
-        </div>
+        </nav>
     );
 }
 
