@@ -1,6 +1,32 @@
 import '../Item/Item.css'
+import './ItemDetail.css';
+import ItemCount from '../ItemCount/ItemCount';
+import { useState } from 'react';
+import { useCartContext } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
-const ItemDetail = ({ nombre, imagen, description, precio, stock }) => {
+const ItemDetail = ({ id, nombre, imagen, description, precio, stock }) => {
+    const [quantity, setCount] = useState(1);
+    const { addItem } = useCartContext();
+    const [flag, setFlag] = useState(false);
+
+    const handleAdd = () => {
+        if (quantity < stock) {
+            setCount(quantity + 1);
+        }
+    };
+
+    const handleSubstract = () => {
+        if (quantity > 1) {
+            setCount(quantity - 1);
+        }
+    };
+
+    const handleOnAdd = () => {
+        addItem({ id, nombre, imagen, precio, stock }, quantity);
+        setFlag(true);
+    };
+
     return (
         <div className="producto">
             <div className="producto__img">
@@ -10,7 +36,13 @@ const ItemDetail = ({ nombre, imagen, description, precio, stock }) => {
             <p className="producto__stock">Stock: {stock} UN</p>
             <p className="producto__precio">Precio: ${precio}</p>
             <p className="producto__description">{description}</p>
-            <button className="producto__button">Comprar</button>
+            {
+                flag
+                    ?
+                    <Link to="/cart"><button className='button-finish'>Terminar mi compra</button></Link>
+                    :
+                    <ItemCount count={quantity} handleAdd={handleAdd} handleSubstract={handleSubstract} handleOnAdd={handleOnAdd} />
+            }
         </div>
     );
 };

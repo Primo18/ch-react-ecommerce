@@ -1,0 +1,15 @@
+.button-finish {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin: 2rem;
+}
+
+.button-finish {
+    background: green;
+}

@@ -1,0 +1,23 @@
+.producto__count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto__count-button {
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.producto__count-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.producto__count-button--add {
+    width: 100%;
+    padding: 1rem;
+}
