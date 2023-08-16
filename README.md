@@ -37,7 +37,6 @@ pnpm build
 El demo de la aplicación se encuentra en el siguiente enlace:
  [react.ferialibre.app](https://react.ferialibre.app/)
   
-## Video
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=TO-_3tck2tg" frameborder="0" allowfullscreen></iframe>
 
+![GIF](https://github.com/Primo18/ch-react-ecommerce/assets/16839164/15dcae16-1668-43e6-b8b7-3d68f7c09068)
 
