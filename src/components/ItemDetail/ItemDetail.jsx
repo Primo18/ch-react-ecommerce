@@ -1,8 +1,9 @@
 import '../Item/Item.css'
 import './ItemDetail.css';
+import { toast } from 'sonner';
 import ItemCount from '../ItemCount/ItemCount';
 import { useState } from 'react';
-import { useCartContext } from '../context/CartContext';
+import { useCartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ id, nombre, imagen, description, precio, stock }) => {
@@ -25,6 +26,7 @@ const ItemDetail = ({ id, nombre, imagen, description, precio, stock }) => {
     const handleOnAdd = () => {
         addItem({ id, nombre, imagen, precio, stock }, quantity);
         setFlag(true);
+        toast.success('Producto agregado al carrito');
     };
 
     return (
