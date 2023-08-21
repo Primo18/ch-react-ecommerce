@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "pnpm run build",
-    "deploy": "pnpm build && gh-pages -d dist",
+    "copy": "copy .\\dist\\index.html .\\dist\\404.html",
+    "deploy": "vite build && pnpm copy && gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
